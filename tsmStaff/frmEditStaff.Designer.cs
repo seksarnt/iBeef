@@ -79,10 +79,14 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblTelNo = new System.Windows.Forms.Label();
             this.txtTelNo = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numAgeMonth = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAgeYear)).BeginInit();
             this.grbAddress.SuspendLayout();
             this.grbIsUseSystem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numAgeMonth)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -101,7 +105,7 @@
             // 
             this.tsbSave.AutoSize = false;
             this.tsbSave.Enabled = false;
-            this.tsbSave.Image = global::BSSoft.iBeef.Properties.Resources.download;
+            this.tsbSave.Image = global::BSSoft.iBeef.Properties.Resources.savedisk;
             this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSave.Name = "tsbSave";
             this.tsbSave.Size = new System.Drawing.Size(55, 45);
@@ -161,7 +165,7 @@
             // 
             // numAgeYear
             // 
-            this.numAgeYear.Location = new System.Drawing.Point(499, 139);
+            this.numAgeYear.Location = new System.Drawing.Point(499, 136);
             this.numAgeYear.Margin = new System.Windows.Forms.Padding(4);
             this.numAgeYear.Name = "numAgeYear";
             this.numAgeYear.Size = new System.Drawing.Size(53, 22);
@@ -171,9 +175,10 @@
             // 
             this.txtIDCardNo.Location = new System.Drawing.Point(133, 163);
             this.txtIDCardNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDCardNo.Mask = "0-0000-00000-00-0";
             this.txtIDCardNo.Name = "txtIDCardNo";
             this.txtIDCardNo.Size = new System.Drawing.Size(210, 22);
-            this.txtIDCardNo.TabIndex = 8;
+            this.txtIDCardNo.TabIndex = 9;
             // 
             // txtStaffCode
             // 
@@ -209,21 +214,23 @@
             // 
             // cboDepartment
             // 
+            this.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDepartment.FormattingEnabled = true;
             this.cboDepartment.Location = new System.Drawing.Point(133, 191);
             this.cboDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.cboDepartment.Name = "cboDepartment";
             this.cboDepartment.Size = new System.Drawing.Size(210, 24);
-            this.cboDepartment.TabIndex = 10;
+            this.cboDepartment.TabIndex = 11;
             // 
             // cboFaction
             // 
+            this.cboFaction.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFaction.FormattingEnabled = true;
             this.cboFaction.Location = new System.Drawing.Point(499, 191);
             this.cboFaction.Margin = new System.Windows.Forms.Padding(4);
             this.cboFaction.Name = "cboFaction";
             this.cboFaction.Size = new System.Drawing.Size(187, 24);
-            this.cboFaction.TabIndex = 11;
+            this.cboFaction.TabIndex = 12;
             // 
             // lblStaffCode
             // 
@@ -328,7 +335,7 @@
             this.grbAddress.Location = new System.Drawing.Point(12, 226);
             this.grbAddress.Name = "grbAddress";
             this.grbAddress.Size = new System.Drawing.Size(714, 139);
-            this.grbAddress.TabIndex = 12;
+            this.grbAddress.TabIndex = 13;
             this.grbAddress.TabStop = false;
             this.grbAddress.Text = "ที่อยู่";
             // 
@@ -338,7 +345,7 @@
             this.cboTumbon.Location = new System.Drawing.Point(121, 102);
             this.cboTumbon.Name = "cboTumbon";
             this.cboTumbon.Size = new System.Drawing.Size(210, 24);
-            this.cboTumbon.TabIndex = 19;
+            this.cboTumbon.TabIndex = 20;
             // 
             // cboProvince
             // 
@@ -346,7 +353,7 @@
             this.cboProvince.Location = new System.Drawing.Point(121, 73);
             this.cboProvince.Name = "cboProvince";
             this.cboProvince.Size = new System.Drawing.Size(210, 24);
-            this.cboProvince.TabIndex = 17;
+            this.cboProvince.TabIndex = 18;
             // 
             // cboAmphur
             // 
@@ -354,7 +361,7 @@
             this.cboAmphur.Location = new System.Drawing.Point(487, 75);
             this.cboAmphur.Name = "cboAmphur";
             this.cboAmphur.Size = new System.Drawing.Size(187, 24);
-            this.cboAmphur.TabIndex = 18;
+            this.cboAmphur.TabIndex = 19;
             // 
             // txtPostCode
             // 
@@ -362,7 +369,7 @@
             this.txtPostCode.MaxLength = 5;
             this.txtPostCode.Name = "txtPostCode";
             this.txtPostCode.Size = new System.Drawing.Size(187, 22);
-            this.txtPostCode.TabIndex = 20;
+            this.txtPostCode.TabIndex = 21;
             // 
             // txtAddrSoi
             // 
@@ -370,7 +377,7 @@
             this.txtAddrSoi.MaxLength = 50;
             this.txtAddrSoi.Name = "txtAddrSoi";
             this.txtAddrSoi.Size = new System.Drawing.Size(210, 22);
-            this.txtAddrSoi.TabIndex = 15;
+            this.txtAddrSoi.TabIndex = 16;
             // 
             // txtAddrRoad
             // 
@@ -378,7 +385,7 @@
             this.txtAddrRoad.MaxLength = 50;
             this.txtAddrRoad.Name = "txtAddrRoad";
             this.txtAddrRoad.Size = new System.Drawing.Size(187, 22);
-            this.txtAddrRoad.TabIndex = 16;
+            this.txtAddrRoad.TabIndex = 17;
             // 
             // txtAddrMoo
             // 
@@ -386,7 +393,7 @@
             this.txtAddrMoo.MaxLength = 50;
             this.txtAddrMoo.Name = "txtAddrMoo";
             this.txtAddrMoo.Size = new System.Drawing.Size(187, 22);
-            this.txtAddrMoo.TabIndex = 14;
+            this.txtAddrMoo.TabIndex = 15;
             // 
             // txtAddrNo
             // 
@@ -394,7 +401,7 @@
             this.txtAddrNo.MaxLength = 50;
             this.txtAddrNo.Name = "txtAddrNo";
             this.txtAddrNo.Size = new System.Drawing.Size(210, 22);
-            this.txtAddrNo.TabIndex = 13;
+            this.txtAddrNo.TabIndex = 14;
             // 
             // label11
             // 
@@ -499,7 +506,7 @@
             this.grbIsUseSystem.Location = new System.Drawing.Point(12, 371);
             this.grbIsUseSystem.Name = "grbIsUseSystem";
             this.grbIsUseSystem.Size = new System.Drawing.Size(714, 131);
-            this.grbIsUseSystem.TabIndex = 21;
+            this.grbIsUseSystem.TabIndex = 22;
             this.grbIsUseSystem.TabStop = false;
             this.grbIsUseSystem.Text = "สิทธิการใช้งานโปรแกรม";
             // 
@@ -509,7 +516,7 @@
             this.cboIsUseSystem.Location = new System.Drawing.Point(121, 21);
             this.cboIsUseSystem.Name = "cboIsUseSystem";
             this.cboIsUseSystem.Size = new System.Drawing.Size(128, 20);
-            this.cboIsUseSystem.TabIndex = 22;
+            this.cboIsUseSystem.TabIndex = 23;
             this.cboIsUseSystem.Text = "มีสิทธิใช้งานโปรแกรม";
             this.cboIsUseSystem.UseVisualStyleBackColor = true;
             // 
@@ -519,7 +526,7 @@
             this.txtPassword.MaxLength = 50;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(210, 22);
-            this.txtPassword.TabIndex = 24;
+            this.txtPassword.TabIndex = 25;
             // 
             // txtPassword2
             // 
@@ -527,7 +534,7 @@
             this.txtPassword2.MaxLength = 50;
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.Size = new System.Drawing.Size(210, 22);
-            this.txtPassword2.TabIndex = 25;
+            this.txtPassword2.TabIndex = 26;
             // 
             // txtUserName
             // 
@@ -535,7 +542,7 @@
             this.txtUserName.MaxLength = 50;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(210, 22);
-            this.txtUserName.TabIndex = 23;
+            this.txtUserName.TabIndex = 24;
             // 
             // lblPassword2
             // 
@@ -586,13 +593,57 @@
             this.txtTelNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelNo.Name = "txtTelNo";
             this.txtTelNo.Size = new System.Drawing.Size(187, 22);
-            this.txtTelNo.TabIndex = 9;
+            this.txtTelNo.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(559, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 16);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "ปี";
+            // 
+            // numAgeMonth
+            // 
+            this.numAgeMonth.Location = new System.Drawing.Point(595, 135);
+            this.numAgeMonth.Margin = new System.Windows.Forms.Padding(4);
+            this.numAgeMonth.Maximum = new decimal(new int[] {
+            11,
+            0,
+            0,
+            0});
+            this.numAgeMonth.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numAgeMonth.Name = "numAgeMonth";
+            this.numAgeMonth.Size = new System.Drawing.Size(53, 22);
+            this.numAgeMonth.TabIndex = 8;
+            this.numAgeMonth.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(655, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 16);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "เดือน";
             // 
             // frmEditStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 512);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.numAgeMonth);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTelNo);
             this.Controls.Add(this.txtTelNo);
             this.Controls.Add(this.grbIsUseSystem);
@@ -620,7 +671,13 @@
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(757, 550);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(757, 550);
             this.Name = "frmEditStaff";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "เพิ่มข้อมูลพนักงาน";
             this.Load += new System.EventHandler(this.frmEditStaff_Load);
@@ -631,6 +688,7 @@
             this.grbAddress.PerformLayout();
             this.grbIsUseSystem.ResumeLayout(false);
             this.grbIsUseSystem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numAgeMonth)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -689,5 +747,8 @@
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblTelNo;
         private System.Windows.Forms.MaskedTextBox txtTelNo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numAgeMonth;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace BSSoft.iBeef.tsmSettings
 {
-    partial class frmEditCowPart
+    partial class frmEditFaction
     {
         /// <summary>
         /// Required designer variable.
@@ -34,8 +34,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txtCowPartCode = new System.Windows.Forms.TextBox();
-            this.txtCowPartName = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.chkInActive = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,6 +67,7 @@
             this.tsbSave.Text = "บันทึก";
             this.tsbSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.tsbSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
             // toolStripSeparator1
             // 
@@ -85,23 +86,23 @@
             this.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
-            // txtCowPartCode
+            // txtCode
             // 
-            this.txtCowPartCode.Location = new System.Drawing.Point(140, 69);
-            this.txtCowPartCode.MaxLength = 50;
-            this.txtCowPartCode.Name = "txtCowPartCode";
-            this.txtCowPartCode.Size = new System.Drawing.Size(175, 22);
-            this.txtCowPartCode.TabIndex = 28;
-            this.txtCowPartCode.TextChanged += new System.EventHandler(this.txtAll_TextChanged);
+            this.txtCode.Location = new System.Drawing.Point(140, 69);
+            this.txtCode.MaxLength = 50;
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(175, 22);
+            this.txtCode.TabIndex = 28;
+            this.txtCode.TextChanged += new System.EventHandler(this.txtAll_TextChanged);
             // 
-            // txtCowPartName
+            // txtName
             // 
-            this.txtCowPartName.Location = new System.Drawing.Point(140, 97);
-            this.txtCowPartName.MaxLength = 50;
-            this.txtCowPartName.Name = "txtCowPartName";
-            this.txtCowPartName.Size = new System.Drawing.Size(175, 22);
-            this.txtCowPartName.TabIndex = 29;
-            this.txtCowPartName.TextChanged += new System.EventHandler(this.txtAll_TextChanged);
+            this.txtName.Location = new System.Drawing.Point(140, 97);
+            this.txtName.MaxLength = 50;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(175, 22);
+            this.txtName.TabIndex = 29;
+            this.txtName.TextChanged += new System.EventHandler(this.txtAll_TextChanged);
             // 
             // txtRemark
             // 
@@ -130,9 +131,9 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(26, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 32;
-            this.label1.Text = "รหัสชิ้นส่วนโค:";
+            this.label1.Text = "รหัสฝ่าย:";
             // 
             // label2
             // 
@@ -140,9 +141,9 @@
             this.label2.ForeColor = System.Drawing.Color.Blue;
             this.label2.Location = new System.Drawing.Point(26, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.Size = new System.Drawing.Size(42, 16);
             this.label2.TabIndex = 33;
-            this.label2.Text = "ชื่อชิ้นส่วนโค:";
+            this.label2.Text = "ชื่อฝ่าย;";
             // 
             // label3
             // 
@@ -153,7 +154,7 @@
             this.label3.TabIndex = 34;
             this.label3.Text = "หมายเหตุ:";
             // 
-            // frmEditCowPart
+            // frmEditFaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,8 +164,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkInActive);
             this.Controls.Add(this.txtRemark);
-            this.Controls.Add(this.txtCowPartName);
-            this.Controls.Add(this.txtCowPartCode);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtCode);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -172,12 +173,12 @@
             this.MaximumSize = new System.Drawing.Size(487, 301);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(487, 301);
-            this.Name = "frmEditCowPart";
+            this.Name = "frmEditFaction";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "เพิ่มชิ้นส่วนโค(สินค้า)";
-            this.Load += new System.EventHandler(this.frmEditCowType_Load);
+            this.Text = "เพิ่มฝ่าย";
+            this.Load += new System.EventHandler(this.frmEditFaction_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -192,8 +193,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton tsbClose;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.TextBox txtCowPartCode;
-        private System.Windows.Forms.TextBox txtCowPartName;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.CheckBox chkInActive;
         private System.Windows.Forms.Label label1;

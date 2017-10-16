@@ -63,8 +63,9 @@
             this.mnuRPTSellByPart = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRPTSellByCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmWindows = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ตดตอToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuSettingsDepartment = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSettingsFaction = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,7 +135,10 @@
             // 
             this.tsmSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuSettingCowType,
-            this.mnuSettingCowPart});
+            this.mnuSettingCowPart,
+            this.toolStripSeparator3,
+            this.mnuSettingsDepartment,
+            this.mnuSettingsFaction});
             this.tsmSettings.Name = "tsmSettings";
             this.tsmSettings.Size = new System.Drawing.Size(49, 24);
             this.tsmSettings.Text = "ตั้งค่า";
@@ -331,23 +335,29 @@
             // 
             // tsmWindows
             // 
-            this.tsmWindows.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1,
-            this.ตดตอToolStripMenuItem});
             this.tsmWindows.Name = "tsmWindows";
             this.tsmWindows.Size = new System.Drawing.Size(65, 24);
             this.tsmWindows.Text = "หน้าต่าง";
+            this.tsmWindows.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsmWindows_DropDownItemClicked);
             // 
-            // toolStripSeparator1
+            // toolStripSeparator3
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(107, 6);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(199, 6);
             // 
-            // ตดตอToolStripMenuItem
+            // mnuSettingsDepartment
             // 
-            this.ตดตอToolStripMenuItem.Name = "ตดตอToolStripMenuItem";
-            this.ตดตอToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
-            this.ตดตอToolStripMenuItem.Text = "ติดต่อ";
+            this.mnuSettingsDepartment.Name = "mnuSettingsDepartment";
+            this.mnuSettingsDepartment.Size = new System.Drawing.Size(202, 24);
+            this.mnuSettingsDepartment.Text = "ตั้งค่าแผนก";
+            this.mnuSettingsDepartment.Click += new System.EventHandler(this.mnuSettingsDepartment_Click);
+            // 
+            // mnuSettingsFaction
+            // 
+            this.mnuSettingsFaction.Name = "mnuSettingsFaction";
+            this.mnuSettingsFaction.Size = new System.Drawing.Size(202, 24);
+            this.mnuSettingsFaction.Text = "ตั้งค่าฝ่าย";
+            this.mnuSettingsFaction.Click += new System.EventHandler(this.mnuSettingsFaction_Click);
             // 
             // mdiMain
             // 
@@ -379,8 +389,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmMember;
         private System.Windows.Forms.ToolStripMenuItem tsmReport;
         private System.Windows.Forms.ToolStripMenuItem tsmWindows;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem ตดตอToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnuMember;
         private System.Windows.Forms.ToolStripMenuItem mnuCustomer;
         private System.Windows.Forms.ToolStripMenuItem tsmSalesList;
@@ -408,6 +416,9 @@
         private System.Windows.Forms.ToolStripMenuItem ทะเบยนโคToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmCowList;
         private System.Windows.Forms.ToolStripMenuItem tsmCowQue;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem mnuSettingsDepartment;
+        private System.Windows.Forms.ToolStripMenuItem mnuSettingsFaction;
     }
 }
 

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaffTimeStamp));
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer1 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer2 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.BevelBorder bevelBorder1 = new FarPoint.Win.BevelBorder(FarPoint.Win.BevelBorderType.Lowered);
             FarPoint.Win.Spread.CellType.TextCellType textCellType1 = new FarPoint.Win.Spread.CellType.TextCellType();
             FarPoint.Win.Spread.CellType.TextCellType textCellType2 = new FarPoint.Win.Spread.CellType.TextCellType();
             FarPoint.Win.Spread.CellType.TextCellType textCellType3 = new FarPoint.Win.Spread.CellType.TextCellType();
@@ -92,7 +91,7 @@
             // 
             this.tsbSave.AutoSize = false;
             this.tsbSave.Enabled = false;
-            this.tsbSave.Image = global::BSSoft.iBeef.Properties.Resources.download;
+            this.tsbSave.Image = global::BSSoft.iBeef.Properties.Resources.savedisk;
             this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSave.Name = "tsbSave";
             this.tsbSave.Size = new System.Drawing.Size(55, 45);
@@ -212,7 +211,7 @@
             this.fpsStaffList.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.fpsStaffList.HorizontalScrollBar.Name = "";
             this.fpsStaffList.HorizontalScrollBar.Renderer = defaultScrollBarRenderer1;
-            this.fpsStaffList.HorizontalScrollBar.TabIndex = 7;
+            this.fpsStaffList.HorizontalScrollBar.TabIndex = 11;
             this.fpsStaffList.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.fpsStaffList.Location = new System.Drawing.Point(8, 168);
             this.fpsStaffList.Name = "fpsStaffList";
@@ -225,8 +224,9 @@
             this.fpsStaffList.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.fpsStaffList.VerticalScrollBar.Name = "";
             this.fpsStaffList.VerticalScrollBar.Renderer = defaultScrollBarRenderer2;
-            this.fpsStaffList.VerticalScrollBar.TabIndex = 8;
+            this.fpsStaffList.VerticalScrollBar.TabIndex = 12;
             this.fpsStaffList.ComboCloseUp += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.fpsStaffList_ComboCloseUp);
+            this.fpsStaffList.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fpsStaffList_KeyPress);
             // 
             // fpsStaffList_Sheet1
             // 
@@ -237,7 +237,6 @@
             this.fpsStaffList_Sheet1.ColumnCount = 7;
             this.fpsStaffList_Sheet1.ColumnHeader.RowCount = 2;
             this.fpsStaffList_Sheet1.RowCount = 3;
-            this.fpsStaffList_Sheet1.Cells.Get(0, 0).Border = bevelBorder1;
             this.fpsStaffList_Sheet1.Cells.Get(0, 0).Value = "EMP001";
             this.fpsStaffList_Sheet1.Cells.Get(0, 1).Value = "นายทดสอบ สุขเกษม";
             this.fpsStaffList_Sheet1.Cells.Get(0, 2).Value = "บัญชี";
@@ -285,7 +284,8 @@
             this.fpsStaffList_Sheet1.Columns.Get(4).CellType = comboBoxCellType1;
             this.fpsStaffList_Sheet1.Columns.Get(4).Width = 123F;
             numberCellType1.DecimalPlaces = 0;
-            numberCellType1.SpinButton = true;
+            numberCellType1.MaximumValue = 1440D;
+            numberCellType1.MinimumValue = 1D;
             this.fpsStaffList_Sheet1.Columns.Get(5).CellType = numberCellType1;
             this.fpsStaffList_Sheet1.Columns.Get(5).Label = "เวลาที่สาย(นาที)";
             this.fpsStaffList_Sheet1.Columns.Get(5).Locked = true;
@@ -327,6 +327,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmStaffTimeStamp";
             this.Text = "ลงเวลาทำงาน";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmStaffTimeStamp_FormClosed);
             this.Load += new System.EventHandler(this.frmStaffTimeStamp_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

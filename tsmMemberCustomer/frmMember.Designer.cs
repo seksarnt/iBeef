@@ -450,6 +450,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMember";
             this.Text = "รายชื่อสมาชิก";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMember_FormClosed);
+            this.Load += new System.EventHandler(this.frmMember_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.grbSearch.ResumeLayout(false);

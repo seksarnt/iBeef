@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BSSoft.iBeef.tsmFile;
 using BSSoft.iBeef.tsmMember;
@@ -24,6 +17,13 @@ namespace BSSoft.iBeef
         }
 
 
+        public ToolStripMenuItem WindowMenu
+        {
+            get
+            {
+                return this.tsmWindows;
+            }
+        }
 
 
         #region Function
@@ -52,7 +52,6 @@ namespace BSSoft.iBeef
 
         private void openChildren(PageNo pPageNo)
         {
-
             Type targetFormType = typeof(frmCowPart);
 
             if (pPageNo == PageNo.ManageStaff)
@@ -79,6 +78,15 @@ namespace BSSoft.iBeef
             {
                 targetFormType = typeof(frmCowList);
             }
+            else if (pPageNo == PageNo.Department)
+            {
+                targetFormType = typeof(frmDepartment);
+            }
+            else if (pPageNo == PageNo.Faction)
+            {
+                targetFormType = typeof(frmFaction);
+            }
+
 
             bool isExist = false;
             foreach (Form f in this.MdiChildren)
@@ -121,10 +129,23 @@ namespace BSSoft.iBeef
                 {
                     targetForm = new frmCowList();
                 }
+                else if (pPageNo == PageNo.Department)
+                {
+                    targetForm = new frmDepartment();
+                }
+                else if (pPageNo == PageNo.Faction)
+                {
+                    targetForm = new frmFaction();
+                }
 
                 targetForm.MdiParent = this;
                 targetForm.WindowState = FormWindowState.Maximized;
                 targetForm.Show();
+
+                MainFunction.AddOrRemaveChildName(pMdiParent: this,
+                    pChildName: targetForm.Name,
+                    pChildText: targetForm.Text,
+                    pIsAdd: true);
             }
         }
 
@@ -191,8 +212,26 @@ namespace BSSoft.iBeef
             openChildren(pPageNo: PageNo.CowList);
         }
 
+        private void mnuSettingsDepartment_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.Department);
+        }
 
+        private void mnuSettingsFaction_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.Faction);
+        }
 
-
+        private void tsmWindows_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            foreach (Form child in this.MdiChildren)
+            {
+                if (child.Name.ToLower() == e.ClickedItem.Name.ToLower())
+                {
+                    child.Activate();
+                    break;
+                }
+            }
+        }
     }
 }

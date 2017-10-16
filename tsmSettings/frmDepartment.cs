@@ -11,9 +11,9 @@ using BSSoft.iBeef.Static;
 
 namespace BSSoft.iBeef.tsmSettings
 {
-    public partial class frmCowPart : Form
+    public partial class frmDepartment: Form
     {
-        public frmCowPart()
+        public frmDepartment()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace BSSoft.iBeef.tsmSettings
 
         private void tsbAddNew_Click(object sender, EventArgs e)
         {
-            frmEditCowPart frmEditType = new frmEditCowPart(pIsNewMode: true);
+            frmEditDepartment frmEditType = new frmEditDepartment(pIsNewMode: true);
             if (frmEditType.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
 
@@ -47,21 +47,19 @@ namespace BSSoft.iBeef.tsmSettings
             this.Close();
         }
 
-        #endregion
-
-        private void frmCowPart_FormClosed(object sender, FormClosedEventArgs e)
+        private void frmDepartment_FormClosed(object sender, FormClosedEventArgs e)
         {
             MainFunction.AddOrRemaveChildName(pMdiParent: (mdiMain)this.MdiParent,
-               pChildName: this.Name,
-               pChildText: this.Text,
-               pIsAdd: false);
+                pChildName: this.Name,
+                pChildText: this.Text,
+                pIsAdd: false);
         }
+      #endregion
 
-        private void frmCowPart_Load(object sender, EventArgs e)
+        private void frmDepartment_Load(object sender, EventArgs e)
         {
             initData();
         }
-
 
     }
 }

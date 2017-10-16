@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BSSoft.iBeef.Static;
 using BSSoft.iBeef.tsmStaff;
 
 namespace BSSoft.iBeef.tsmCowList
@@ -24,22 +25,43 @@ namespace BSSoft.iBeef.tsmCowList
 
         const int _col_check = 0;
         const int _col_code = 1;
-        const int _col_name = 2;
-        const int _col_province = 3;
-        const int _col_amphur = 4;
-        const int _col_tumbon = 5;
-        const int _col_tel = 6;
-        const int _col_cowcount = 7;
-        const int _col_cowproducted = 8;
-        const int _col_cowwait = 9;
-        const int _col_remark = 10;
+        const int _col_moreinfo = 2;
+        const int _col_name = 3;
+        const int _col_address = 4;
+        const int _col_breed_color = 5;
+        const int _col_registdate = 6;
+        const int _col_state = 7;
+        const int _col_grade = 8;
+        const int _col_cowcount = 9;
+        const int _col_cowproducted = 10;
+        const int _col_cowwait = 11;
+        const int _col_remark = 12;
 
+
+        FarPoint.Win.Spread.CellType.ComboBoxCellType _cboCowState = new FarPoint.Win.Spread.CellType.ComboBoxCellType();
+        FarPoint.Win.Spread.CellType.ComboBoxCellType _cboCowGrade = new FarPoint.Win.Spread.CellType.ComboBoxCellType();
         #endregion
 
 
 
 
         #region Function
+
+        private void initData()
+        {
+            this.Text += " : " + this.Name;
+
+            _cboCowState.ItemData = new string[] { "1", "2", "3", "4", "5" };
+            _cboCowState.Items = new string[] { "ทั้งหมด", "ยังไม่ได้เชือด/ไม่ได้อยู่ในคิว", "ยังไม่ได้เชือด/อยู่ในคิว", "เชือดแล้ว", "ตาย/อื่นๆ" };
+            _cboCowState.EditorValue = FarPoint.Win.Spread.CellType.EditorValue.ItemData;
+            this.fpsSearchResult_Sheet1.Columns.Get(_col_state).CellType = _cboCowState;
+
+            _cboCowGrade.ItemData = new string[] { "1", "2", "3", "4" };
+            _cboCowGrade.Items = new string[] { "A", "B", "C", "D" };
+            _cboCowGrade.EditorValue = FarPoint.Win.Spread.CellType.EditorValue.ItemData;
+            this.fpsSearchResult_Sheet1.Columns.Get(_col_grade).CellType = _cboCowGrade;
+
+        }
 
         /// <summary>
         /// สำหรับเปิด/ปิดปุ่มลบ เมื่อมีการเลือกหรือไม่เลือกแถว
@@ -122,6 +144,19 @@ namespace BSSoft.iBeef.tsmCowList
         private void fpsSearchResult_DoubleClick(object sender, EventArgs e)
         {
             editCow(pIsNewMode: false);
+        }
+
+        private void frmCowList_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainFunction.AddOrRemaveChildName(pMdiParent: (mdiMain)this.MdiParent,
+               pChildName: this.Name,
+               pChildText: this.Text,
+               pIsAdd: false);
+        }
+
+        private void frmCowList_Load(object sender, EventArgs e)
+        {
+            initData();
         }
 
 

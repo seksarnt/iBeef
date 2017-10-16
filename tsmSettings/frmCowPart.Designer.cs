@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCowPart));
-            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer1 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer2 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType1 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType1 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType2 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType3 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer3 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer4 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType2 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType4 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType5 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType6 = new FarPoint.Win.Spread.CellType.TextCellType();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbSearch = new System.Windows.Forms.ToolStripButton();
             this.tsbAddNew = new System.Windows.Forms.ToolStripButton();
@@ -237,7 +237,7 @@
             this.fpsCowPart.FocusRenderer = ((FarPoint.Win.Spread.IFocusIndicatorRenderer)(resources.GetObject("fpsCowPart.FocusRenderer")));
             this.fpsCowPart.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.fpsCowPart.HorizontalScrollBar.Name = "";
-            this.fpsCowPart.HorizontalScrollBar.Renderer = defaultScrollBarRenderer1;
+            this.fpsCowPart.HorizontalScrollBar.Renderer = defaultScrollBarRenderer3;
             this.fpsCowPart.HorizontalScrollBar.TabIndex = 7;
             this.fpsCowPart.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.fpsCowPart.Location = new System.Drawing.Point(8, 153);
@@ -250,7 +250,7 @@
             this.fpsCowPart.TabIndex = 21;
             this.fpsCowPart.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.fpsCowPart.VerticalScrollBar.Name = "";
-            this.fpsCowPart.VerticalScrollBar.Renderer = defaultScrollBarRenderer2;
+            this.fpsCowPart.VerticalScrollBar.Renderer = defaultScrollBarRenderer4;
             this.fpsCowPart.VerticalScrollBar.TabIndex = 8;
             // 
             // fpsCowPart_Sheet1
@@ -267,20 +267,20 @@
             this.fpsCowPart_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "ชื่อชิ้นส่วนโค";
             this.fpsCowPart_Sheet1.ColumnHeader.Cells.Get(0, 4).Value = "หมายเหตุ";
             this.fpsCowPart_Sheet1.ColumnHeader.DefaultStyle.Parent = "HeaderDefault";
-            this.fpsCowPart_Sheet1.Columns.Get(0).CellType = checkBoxCellType1;
+            this.fpsCowPart_Sheet1.Columns.Get(0).CellType = checkBoxCellType2;
             this.fpsCowPart_Sheet1.Columns.Get(0).Label = "...";
             this.fpsCowPart_Sheet1.Columns.Get(0).Resizable = false;
             this.fpsCowPart_Sheet1.Columns.Get(0).Width = 25F;
-            this.fpsCowPart_Sheet1.Columns.Get(1).CellType = textCellType1;
+            this.fpsCowPart_Sheet1.Columns.Get(1).CellType = textCellType4;
             this.fpsCowPart_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.fpsCowPart_Sheet1.Columns.Get(1).Label = "สถานะ";
             this.fpsCowPart_Sheet1.Columns.Get(1).Locked = true;
             this.fpsCowPart_Sheet1.Columns.Get(1).Width = 120F;
-            this.fpsCowPart_Sheet1.Columns.Get(2).CellType = textCellType2;
+            this.fpsCowPart_Sheet1.Columns.Get(2).CellType = textCellType5;
             this.fpsCowPart_Sheet1.Columns.Get(2).Label = "รหัสชิ้นส่วนโค";
             this.fpsCowPart_Sheet1.Columns.Get(2).Locked = true;
             this.fpsCowPart_Sheet1.Columns.Get(2).Width = 200F;
-            this.fpsCowPart_Sheet1.Columns.Get(3).CellType = textCellType3;
+            this.fpsCowPart_Sheet1.Columns.Get(3).CellType = textCellType6;
             this.fpsCowPart_Sheet1.Columns.Get(3).Label = "ชื่อชิ้นส่วนโค";
             this.fpsCowPart_Sheet1.Columns.Get(3).Locked = true;
             this.fpsCowPart_Sheet1.Columns.Get(3).Width = 220F;
@@ -307,6 +307,8 @@
             this.Name = "frmCowPart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ตั้งค่าชิ้นส่วนโค(สินค้า)";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmCowPart_FormClosed);
+            this.Load += new System.EventHandler(this.frmCowPart_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

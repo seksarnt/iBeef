@@ -63,7 +63,7 @@
             // 
             this.tsbSave.AutoSize = false;
             this.tsbSave.Enabled = false;
-            this.tsbSave.Image = global::BSSoft.iBeef.Properties.Resources.download;
+            this.tsbSave.Image = global::BSSoft.iBeef.Properties.Resources.savedisk;
             this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSave.Name = "tsbSave";
             this.tsbSave.Size = new System.Drawing.Size(55, 45);

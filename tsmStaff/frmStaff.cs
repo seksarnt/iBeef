@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BSSoft.iBeef.Static;
 using BSSoft.iBeef.tsmStaff;
 
 namespace BSSoft.iBeef.tsmStaff
@@ -38,6 +39,11 @@ namespace BSSoft.iBeef.tsmStaff
 
 
         #region Function
+
+        private void initData()
+        {
+            this.Text += " : " + this.Name;
+        }
 
         /// <summary>
         /// สำหรับเปิด/ปิดปุ่มลบ เมื่อมีการเลือกหรือไม่เลือกแถว
@@ -120,6 +126,19 @@ namespace BSSoft.iBeef.tsmStaff
         private void fpsSearchResult_DoubleClick(object sender, EventArgs e)
         {
             editStaff(pIsNewMode: false);
+        }
+
+        private void frmStaff_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainFunction.AddOrRemaveChildName(pMdiParent: (mdiMain)this.MdiParent,
+               pChildName: this.Name,
+               pChildText: this.Text,
+               pIsAdd: false);
+        }
+
+        private void frmStaff_Load(object sender, EventArgs e)
+        {
+            initData();
         }
 
 

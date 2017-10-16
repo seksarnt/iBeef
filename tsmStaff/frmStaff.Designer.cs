@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaff));
-            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer1 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer2 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType1 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType1 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType2 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType3 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType4 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType5 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType6 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType7 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType8 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer3 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer4 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType2 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType9 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType10 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType11 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType12 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType13 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType14 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType15 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType16 = new FarPoint.Win.Spread.CellType.TextCellType();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbSearch = new System.Windows.Forms.ToolStripButton();
             this.tsbAddNew = new System.Windows.Forms.ToolStripButton();
@@ -50,6 +50,11 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.grbSearch = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMemberCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,11 +63,6 @@
             this.fpsSearchResult_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tssSearchCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fpsSearchResult)).BeginInit();
@@ -183,6 +183,50 @@
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "ค้นหา";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(111, 81);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(166, 20);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "แสดงเฉพาะที่ยกเลิกใช้งานแล้ว";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(399, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 16);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "ฝ่าย:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 16);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "แผนก:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(501, 51);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(227, 24);
+            this.comboBox2.TabIndex = 4;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(111, 51);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(227, 24);
+            this.comboBox1.TabIndex = 3;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -232,7 +276,7 @@
             this.fpsSearchResult.FocusRenderer = ((FarPoint.Win.Spread.IFocusIndicatorRenderer)(resources.GetObject("fpsSearchResult.FocusRenderer")));
             this.fpsSearchResult.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.fpsSearchResult.HorizontalScrollBar.Name = "";
-            this.fpsSearchResult.HorizontalScrollBar.Renderer = defaultScrollBarRenderer1;
+            this.fpsSearchResult.HorizontalScrollBar.Renderer = defaultScrollBarRenderer3;
             this.fpsSearchResult.HorizontalScrollBar.TabIndex = 17;
             this.fpsSearchResult.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.fpsSearchResult.Location = new System.Drawing.Point(8, 180);
@@ -246,7 +290,7 @@
             this.fpsSearchResult.TabIndex = 6;
             this.fpsSearchResult.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.fpsSearchResult.VerticalScrollBar.Name = "";
-            this.fpsSearchResult.VerticalScrollBar.Renderer = defaultScrollBarRenderer2;
+            this.fpsSearchResult.VerticalScrollBar.Renderer = defaultScrollBarRenderer4;
             this.fpsSearchResult.VerticalScrollBar.TabIndex = 18;
             this.fpsSearchResult.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.fpsSearchResult_ButtonClicked);
             this.fpsSearchResult.DoubleClick += new System.EventHandler(this.fpsSearchResult_DoubleClick);
@@ -279,35 +323,35 @@
             this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(1, 7).Value = "User Name";
             this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(1, 8).Value = "รหัสผ่าน";
             this.fpsSearchResult_Sheet1.ColumnHeader.DefaultStyle.Parent = "HeaderDefault";
-            this.fpsSearchResult_Sheet1.Columns.Get(0).CellType = checkBoxCellType1;
+            this.fpsSearchResult_Sheet1.Columns.Get(0).CellType = checkBoxCellType2;
             this.fpsSearchResult_Sheet1.Columns.Get(0).Resizable = false;
             this.fpsSearchResult_Sheet1.Columns.Get(0).Width = 25F;
-            this.fpsSearchResult_Sheet1.Columns.Get(1).CellType = textCellType1;
+            this.fpsSearchResult_Sheet1.Columns.Get(1).CellType = textCellType9;
             this.fpsSearchResult_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.fpsSearchResult_Sheet1.Columns.Get(1).Locked = true;
             this.fpsSearchResult_Sheet1.Columns.Get(1).Width = 105F;
-            this.fpsSearchResult_Sheet1.Columns.Get(2).CellType = textCellType2;
+            this.fpsSearchResult_Sheet1.Columns.Get(2).CellType = textCellType10;
             this.fpsSearchResult_Sheet1.Columns.Get(2).Locked = true;
             this.fpsSearchResult_Sheet1.Columns.Get(2).Width = 99F;
-            this.fpsSearchResult_Sheet1.Columns.Get(3).CellType = textCellType3;
+            this.fpsSearchResult_Sheet1.Columns.Get(3).CellType = textCellType11;
             this.fpsSearchResult_Sheet1.Columns.Get(3).Locked = true;
             this.fpsSearchResult_Sheet1.Columns.Get(3).Width = 166F;
-            this.fpsSearchResult_Sheet1.Columns.Get(4).CellType = textCellType4;
+            this.fpsSearchResult_Sheet1.Columns.Get(4).CellType = textCellType12;
             this.fpsSearchResult_Sheet1.Columns.Get(4).Locked = true;
             this.fpsSearchResult_Sheet1.Columns.Get(4).Width = 123F;
-            this.fpsSearchResult_Sheet1.Columns.Get(5).CellType = textCellType5;
+            this.fpsSearchResult_Sheet1.Columns.Get(5).CellType = textCellType13;
             this.fpsSearchResult_Sheet1.Columns.Get(5).Locked = true;
             this.fpsSearchResult_Sheet1.Columns.Get(5).Width = 116F;
-            this.fpsSearchResult_Sheet1.Columns.Get(6).CellType = textCellType6;
+            this.fpsSearchResult_Sheet1.Columns.Get(6).CellType = textCellType14;
             this.fpsSearchResult_Sheet1.Columns.Get(6).Label = "มีสิทธิ์ใช้งาน";
             this.fpsSearchResult_Sheet1.Columns.Get(6).Locked = true;
             this.fpsSearchResult_Sheet1.Columns.Get(6).Width = 100F;
-            this.fpsSearchResult_Sheet1.Columns.Get(7).CellType = textCellType7;
+            this.fpsSearchResult_Sheet1.Columns.Get(7).CellType = textCellType15;
             this.fpsSearchResult_Sheet1.Columns.Get(7).Label = "User Name";
             this.fpsSearchResult_Sheet1.Columns.Get(7).Locked = true;
             this.fpsSearchResult_Sheet1.Columns.Get(7).Width = 100F;
-            textCellType8.PasswordChar = '*';
-            this.fpsSearchResult_Sheet1.Columns.Get(8).CellType = textCellType8;
+            textCellType16.PasswordChar = '*';
+            this.fpsSearchResult_Sheet1.Columns.Get(8).CellType = textCellType16;
             this.fpsSearchResult_Sheet1.Columns.Get(8).Label = "รหัสผ่าน";
             this.fpsSearchResult_Sheet1.Columns.Get(8).Locked = true;
             this.fpsSearchResult_Sheet1.Columns.Get(8).Width = 100F;
@@ -335,50 +379,6 @@
             this.tssSearchCount.Size = new System.Drawing.Size(114, 17);
             this.tssSearchCount.Text = "ผลการค้นหา 0 รายการ";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(227, 24);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(501, 51);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(227, 24);
-            this.comboBox2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "แผนก:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(399, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 16);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "ฝ่าย:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(111, 81);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(166, 20);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "แสดงเฉพาะที่ยกเลิกใช้งานแล้ว";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // frmStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -392,6 +392,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmStaff";
             this.Text = "รายชื่อพนักงาน";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmStaff_FormClosed);
+            this.Load += new System.EventHandler(this.frmStaff_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.grbSearch.ResumeLayout(false);

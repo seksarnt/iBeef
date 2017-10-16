@@ -15,7 +15,9 @@ namespace BSSoft.iBeef.Static
         CowPart = 105,
         StaffTimeStamp = 106,
         CowList = 107,
-        CowQue = 108
+        CowQue = 108,
+        Department = 109,
+        Faction = 110
     };
 
     public static class Enumeric

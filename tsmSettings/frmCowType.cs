@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BSSoft.iBeef.Static;
 
 namespace BSSoft.iBeef.tsmSettings
 {
@@ -27,6 +28,14 @@ namespace BSSoft.iBeef.tsmSettings
         
         #endregion
 
+        #region Function
+
+        private void initData()
+        {
+            this.Text += " : " + this.Name;
+        }
+
+        #endregion
 
 
 
@@ -100,6 +109,19 @@ namespace BSSoft.iBeef.tsmSettings
         }
 
         #endregion
+
+        private void frmCowType_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainFunction.AddOrRemaveChildName(pMdiParent: (mdiMain)this.MdiParent,
+               pChildName: this.Name,
+               pChildText: this.Text,
+               pIsAdd: false);
+        }
+
+        private void frmCowType_Load(object sender, EventArgs e)
+        {
+            initData();
+        }
 
 
 
