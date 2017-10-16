@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A251722C-2717-4D42-AFF8-DEEF1B1DE453}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BSSoft.iBeef</RootNamespace>
+    <AssemblyName>BSSoft.iBeef</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="FarPoint.CalcEngine, Version=4.0.2001.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Excel, Version=4.0.2001.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.PDF, Version=1.0.2001.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=4.0.2001.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win, Version=4.0.2001.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win.Spread, Version=4.0.2001.2005, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="mdiMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiMain.Designer.cs">
+      <DependentUpon>mdiMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static\Enumeric.cs" />
+    <Compile Include="tsmFile\frmDBSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmFile\frmDBSettings.Designer.cs">
+      <DependentUpon>frmDBSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmCowList\frmCowList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmCowList\frmCowList.Designer.cs">
+      <DependentUpon>frmCowList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowPart.Designer.cs">
+      <DependentUpon>frmCowPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowType.Designer.cs">
+      <DependentUpon>frmCowType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowPart.Designer.cs">
+      <DependentUpon>frmEditCowPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowType.Designer.cs">
+      <DependentUpon>frmEditCowType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmStaff\frmEditStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmStaff\frmEditStaff.Designer.cs">
+      <DependentUpon>frmEditStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmFile\frmMOrgaization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmFile\frmMOrgaization.Designer.cs">
+      <DependentUpon>frmMOrgaization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmMemberCustomer\frmMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmMemberCustomer\frmMember.Designer.cs">
+      <DependentUpon>frmMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmStaff\frmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmStaff\frmStaff.Designer.cs">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmStaff\frmStaffTimeStamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmStaff\frmStaffTimeStamp.Designer.cs">
+      <DependentUpon>frmStaffTimeStamp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="mdiMain.resx">
+      <DependentUpon>mdiMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="tsmFile\frmDBSettings.resx">
+      <DependentUpon>frmDBSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmCowList\frmCowList.resx">
+      <DependentUpon>frmCowList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmCowPart.resx">
+      <DependentUpon>frmCowPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmCowType.resx">
+      <DependentUpon>frmCowType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmEditCowPart.resx">
+      <DependentUpon>frmEditCowPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmEditCowType.resx">
+      <DependentUpon>frmEditCowType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmStaff\frmEditStaff.resx">
+      <DependentUpon>frmEditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmFile\frmMOrgaization.resx">
+      <DependentUpon>frmMOrgaization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmMemberCustomer\frmMember.resx">
+      <DependentUpon>frmMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmStaff\frmStaff.resx">
+      <DependentUpon>frmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmStaff\frmStaffTimeStamp.resx">
+      <DependentUpon>frmStaffTimeStamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
