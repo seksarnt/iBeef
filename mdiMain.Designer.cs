@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdiMain));
             this.mnsMain = new System.Windows.Forms.MenuStrip();
             this.tsmFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuOrganization = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,8 +37,26 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSettingCowType = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuMainData = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCowBreed = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCowHorn = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCowPurpose = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCowStatus = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCowGrowUp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCowColor = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuCowStall = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCowLocation = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuSettingCowPart = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuSettingsDepartment = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSettingsFaction = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ขอมลทอยToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.จงหวดToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.อำเภอToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ตำบลToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.พนกงานToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuOntime = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,9 +82,6 @@
             this.mnuRPTSellByPart = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRPTSellByCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmWindows = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuSettingsDepartment = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSettingsFaction = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,28 +150,158 @@
             // tsmSettings
             // 
             this.tsmSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuSettingCowType,
+            this.mnuMainData,
+            this.toolStripSeparator4,
             this.mnuSettingCowPart,
             this.toolStripSeparator3,
             this.mnuSettingsDepartment,
-            this.mnuSettingsFaction});
+            this.mnuSettingsFaction,
+            this.toolStripSeparator1,
+            this.ขอมลทอยToolStripMenuItem});
             this.tsmSettings.Name = "tsmSettings";
             this.tsmSettings.Size = new System.Drawing.Size(49, 24);
             this.tsmSettings.Text = "ตั้งค่า";
             // 
-            // mnuSettingCowType
+            // mnuMainData
             // 
-            this.mnuSettingCowType.Name = "mnuSettingCowType";
-            this.mnuSettingCowType.Size = new System.Drawing.Size(202, 24);
-            this.mnuSettingCowType.Text = "ตั้งค่าประเภทโค";
-            this.mnuSettingCowType.Click += new System.EventHandler(this.mnuSettingCowType_Click);
+            this.mnuMainData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuCowBreed,
+            this.mnuCowHorn,
+            this.mnuCowPurpose,
+            this.mnuCowStatus,
+            this.mnuCowGrowUp,
+            this.mnuCowColor,
+            this.toolStripSeparator5,
+            this.mnuCowStall,
+            this.mnuCowLocation});
+            this.mnuMainData.Name = "mnuMainData";
+            this.mnuMainData.Size = new System.Drawing.Size(174, 24);
+            this.mnuMainData.Text = "ข้อมูลหลัก";
+            // 
+            // mnuCowBreed
+            // 
+            this.mnuCowBreed.Name = "mnuCowBreed";
+            this.mnuCowBreed.Size = new System.Drawing.Size(221, 24);
+            this.mnuCowBreed.Text = "สายพันธุ์โค";
+            this.mnuCowBreed.Click += new System.EventHandler(this.mnuCowBreed_Click);
+            // 
+            // mnuCowHorn
+            // 
+            this.mnuCowHorn.Name = "mnuCowHorn";
+            this.mnuCowHorn.Size = new System.Drawing.Size(221, 24);
+            this.mnuCowHorn.Text = "ลักษณะเขา";
+            this.mnuCowHorn.Click += new System.EventHandler(this.mnuCowHorn_Click);
+            // 
+            // mnuCowPurpose
+            // 
+            this.mnuCowPurpose.Name = "mnuCowPurpose";
+            this.mnuCowPurpose.Size = new System.Drawing.Size(221, 24);
+            this.mnuCowPurpose.Text = "วัตถุประสงค์ในการเลี้ยงโค";
+            this.mnuCowPurpose.Click += new System.EventHandler(this.mnuCowPurpose_Click);
+            // 
+            // mnuCowStatus
+            // 
+            this.mnuCowStatus.Name = "mnuCowStatus";
+            this.mnuCowStatus.Size = new System.Drawing.Size(221, 24);
+            this.mnuCowStatus.Text = "สถานะโค";
+            this.mnuCowStatus.Click += new System.EventHandler(this.mnuCowStatus_Click);
+            // 
+            // mnuCowGrowUp
+            // 
+            this.mnuCowGrowUp.Name = "mnuCowGrowUp";
+            this.mnuCowGrowUp.Size = new System.Drawing.Size(221, 24);
+            this.mnuCowGrowUp.Text = "ระดับการพัฒนา";
+            this.mnuCowGrowUp.Click += new System.EventHandler(this.mnuCowGrowUp_Click);
+            // 
+            // mnuCowColor
+            // 
+            this.mnuCowColor.Name = "mnuCowColor";
+            this.mnuCowColor.Size = new System.Drawing.Size(221, 24);
+            this.mnuCowColor.Text = "สีโค";
+            this.mnuCowColor.Click += new System.EventHandler(this.mnuCowColor_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(218, 6);
+            // 
+            // mnuCowStall
+            // 
+            this.mnuCowStall.Name = "mnuCowStall";
+            this.mnuCowStall.Size = new System.Drawing.Size(221, 24);
+            this.mnuCowStall.Text = "คอก";
+            this.mnuCowStall.Click += new System.EventHandler(this.mnuCowStall_Click);
+            // 
+            // mnuCowLocation
+            // 
+            this.mnuCowLocation.Name = "mnuCowLocation";
+            this.mnuCowLocation.Size = new System.Drawing.Size(221, 24);
+            this.mnuCowLocation.Text = "สถานที่เลี้ยง";
+            this.mnuCowLocation.Click += new System.EventHandler(this.mnuCowLocation_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(171, 6);
             // 
             // mnuSettingCowPart
             // 
             this.mnuSettingCowPart.Name = "mnuSettingCowPart";
-            this.mnuSettingCowPart.Size = new System.Drawing.Size(202, 24);
-            this.mnuSettingCowPart.Text = "ตั้งค่าชิ้นส่วนโค(สินค้า)";
+            this.mnuSettingCowPart.Size = new System.Drawing.Size(174, 24);
+            this.mnuSettingCowPart.Text = "ชิ้นส่วนโค(สินค้า)";
             this.mnuSettingCowPart.Click += new System.EventHandler(this.mnuSettingCowPart_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(171, 6);
+            // 
+            // mnuSettingsDepartment
+            // 
+            this.mnuSettingsDepartment.Name = "mnuSettingsDepartment";
+            this.mnuSettingsDepartment.Size = new System.Drawing.Size(174, 24);
+            this.mnuSettingsDepartment.Text = "แผนก";
+            this.mnuSettingsDepartment.Click += new System.EventHandler(this.mnuSettingsDepartment_Click);
+            // 
+            // mnuSettingsFaction
+            // 
+            this.mnuSettingsFaction.Name = "mnuSettingsFaction";
+            this.mnuSettingsFaction.Size = new System.Drawing.Size(174, 24);
+            this.mnuSettingsFaction.Text = "ฝ่าย";
+            this.mnuSettingsFaction.Click += new System.EventHandler(this.mnuSettingsFaction_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(171, 6);
+            // 
+            // ขอมลทอยToolStripMenuItem
+            // 
+            this.ขอมลทอยToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.จงหวดToolStripMenuItem,
+            this.อำเภอToolStripMenuItem,
+            this.ตำบลToolStripMenuItem});
+            this.ขอมลทอยToolStripMenuItem.Name = "ขอมลทอยToolStripMenuItem";
+            this.ขอมลทอยToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.ขอมลทอยToolStripMenuItem.Text = "ข้อมูลที่อยู่";
+            // 
+            // จงหวดToolStripMenuItem
+            // 
+            this.จงหวดToolStripMenuItem.Name = "จงหวดToolStripMenuItem";
+            this.จงหวดToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.จงหวดToolStripMenuItem.Text = "จังหวัด";
+            // 
+            // อำเภอToolStripMenuItem
+            // 
+            this.อำเภอToolStripMenuItem.Name = "อำเภอToolStripMenuItem";
+            this.อำเภอToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.อำเภอToolStripMenuItem.Text = "อำเภอ";
+            // 
+            // ตำบลToolStripMenuItem
+            // 
+            this.ตำบลToolStripMenuItem.Name = "ตำบลToolStripMenuItem";
+            this.ตำบลToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.ตำบลToolStripMenuItem.Text = "ตำบล";
             // 
             // พนกงานToolStripMenuItem
             // 
@@ -340,25 +486,6 @@
             this.tsmWindows.Text = "หน้าต่าง";
             this.tsmWindows.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsmWindows_DropDownItemClicked);
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(199, 6);
-            // 
-            // mnuSettingsDepartment
-            // 
-            this.mnuSettingsDepartment.Name = "mnuSettingsDepartment";
-            this.mnuSettingsDepartment.Size = new System.Drawing.Size(202, 24);
-            this.mnuSettingsDepartment.Text = "ตั้งค่าแผนก";
-            this.mnuSettingsDepartment.Click += new System.EventHandler(this.mnuSettingsDepartment_Click);
-            // 
-            // mnuSettingsFaction
-            // 
-            this.mnuSettingsFaction.Name = "mnuSettingsFaction";
-            this.mnuSettingsFaction.Size = new System.Drawing.Size(202, 24);
-            this.mnuSettingsFaction.Text = "ตั้งค่าฝ่าย";
-            this.mnuSettingsFaction.Click += new System.EventHandler(this.mnuSettingsFaction_Click);
-            // 
             // mdiMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -366,6 +493,7 @@
             this.ClientSize = new System.Drawing.Size(881, 569);
             this.Controls.Add(this.mnsMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnsMain;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -411,7 +539,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuRPTSellByPart;
         private System.Windows.Forms.ToolStripMenuItem mnuRPTSellByCustomer;
         private System.Windows.Forms.ToolStripMenuItem tsmSettings;
-        private System.Windows.Forms.ToolStripMenuItem mnuSettingCowType;
         private System.Windows.Forms.ToolStripMenuItem mnuSettingCowPart;
         private System.Windows.Forms.ToolStripMenuItem ทะเบยนโคToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmCowList;
@@ -419,6 +546,22 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem mnuSettingsDepartment;
         private System.Windows.Forms.ToolStripMenuItem mnuSettingsFaction;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem ขอมลทอยToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuMainData;
+        private System.Windows.Forms.ToolStripMenuItem mnuCowBreed;
+        private System.Windows.Forms.ToolStripMenuItem mnuCowHorn;
+        private System.Windows.Forms.ToolStripMenuItem mnuCowPurpose;
+        private System.Windows.Forms.ToolStripMenuItem mnuCowStatus;
+        private System.Windows.Forms.ToolStripMenuItem mnuCowGrowUp;
+        private System.Windows.Forms.ToolStripMenuItem mnuCowColor;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem mnuCowStall;
+        private System.Windows.Forms.ToolStripMenuItem mnuCowLocation;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem จงหวดToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem อำเภอToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ตำบลToolStripMenuItem;
     }
 }
 

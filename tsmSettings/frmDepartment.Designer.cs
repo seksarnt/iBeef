@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDepartment));
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer1 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer2 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType3 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType7 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType8 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.TextCellType textCellType9 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType1 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType1 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType2 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType3 = new FarPoint.Win.Spread.CellType.TextCellType();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbSearch = new System.Windows.Forms.ToolStripButton();
             this.tsbAddNew = new System.Windows.Forms.ToolStripButton();
@@ -52,13 +52,13 @@
             this.txtSearchCode = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.fpsCowPart = new FarPoint.Win.Spread.FpSpread();
-            this.fpsCowPart_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.fpsData = new FarPoint.Win.Spread.FpSpread();
+            this.fpsData_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fpsCowPart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fpsCowPart_Sheet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fpsData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fpsData_Sheet1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -226,79 +226,79 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(114, 17);
             this.toolStripStatusLabel1.Text = "ผลการค้นหา 0 รายการ";
             // 
-            // fpsCowPart
+            // fpsData
             // 
-            this.fpsCowPart.About = "4.0.2001.2005";
-            this.fpsCowPart.AccessibleDescription = "fpsCowType, Sheet1";
-            this.fpsCowPart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.fpsData.About = "4.0.2001.2005";
+            this.fpsData.AccessibleDescription = "fpsCowType, Sheet1";
+            this.fpsData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fpsCowPart.BackColor = System.Drawing.SystemColors.Control;
-            this.fpsCowPart.FocusRenderer = ((FarPoint.Win.Spread.IFocusIndicatorRenderer)(resources.GetObject("fpsCowPart.FocusRenderer")));
-            this.fpsCowPart.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
-            this.fpsCowPart.HorizontalScrollBar.Name = "";
-            this.fpsCowPart.HorizontalScrollBar.Renderer = defaultScrollBarRenderer1;
-            this.fpsCowPart.HorizontalScrollBar.TabIndex = 7;
-            this.fpsCowPart.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
-            this.fpsCowPart.Location = new System.Drawing.Point(8, 153);
-            this.fpsCowPart.Name = "fpsCowPart";
-            this.fpsCowPart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.fpsCowPart.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
-            this.fpsCowPart_Sheet1});
-            this.fpsCowPart.Size = new System.Drawing.Size(723, 263);
-            this.fpsCowPart.Skin = FarPoint.Win.Spread.DefaultSpreadSkins.Classic;
-            this.fpsCowPart.TabIndex = 21;
-            this.fpsCowPart.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
-            this.fpsCowPart.VerticalScrollBar.Name = "";
-            this.fpsCowPart.VerticalScrollBar.Renderer = defaultScrollBarRenderer2;
-            this.fpsCowPart.VerticalScrollBar.TabIndex = 8;
+            this.fpsData.BackColor = System.Drawing.SystemColors.Control;
+            this.fpsData.FocusRenderer = ((FarPoint.Win.Spread.IFocusIndicatorRenderer)(resources.GetObject("fpsData.FocusRenderer")));
+            this.fpsData.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.fpsData.HorizontalScrollBar.Name = "";
+            this.fpsData.HorizontalScrollBar.Renderer = defaultScrollBarRenderer1;
+            this.fpsData.HorizontalScrollBar.TabIndex = 7;
+            this.fpsData.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
+            this.fpsData.Location = new System.Drawing.Point(8, 153);
+            this.fpsData.Name = "fpsData";
+            this.fpsData.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.fpsData.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.fpsData_Sheet1});
+            this.fpsData.Size = new System.Drawing.Size(723, 263);
+            this.fpsData.Skin = FarPoint.Win.Spread.DefaultSpreadSkins.Classic;
+            this.fpsData.TabIndex = 21;
+            this.fpsData.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
+            this.fpsData.VerticalScrollBar.Name = "";
+            this.fpsData.VerticalScrollBar.Renderer = defaultScrollBarRenderer2;
+            this.fpsData.VerticalScrollBar.TabIndex = 8;
             // 
-            // fpsCowPart_Sheet1
+            // fpsData_Sheet1
             // 
-            this.fpsCowPart_Sheet1.Reset();
-            this.fpsCowPart_Sheet1.SheetName = "Sheet1";
+            this.fpsData_Sheet1.Reset();
+            this.fpsData_Sheet1.SheetName = "Sheet1";
             // Formulas and custom names must be loaded with R1C1 reference style
-            this.fpsCowPart_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
-            this.fpsCowPart_Sheet1.ColumnCount = 5;
-            this.fpsCowPart_Sheet1.RowCount = 0;
-            this.fpsCowPart_Sheet1.ColumnHeader.Cells.Get(0, 0).Value = "...";
-            this.fpsCowPart_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "สถานะ";
-            this.fpsCowPart_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "รหัสแผนก";
-            this.fpsCowPart_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "ชื่อแผนก";
-            this.fpsCowPart_Sheet1.ColumnHeader.Cells.Get(0, 4).Value = "หมายเหตุ";
-            this.fpsCowPart_Sheet1.ColumnHeader.DefaultStyle.Parent = "HeaderDefault";
-            this.fpsCowPart_Sheet1.Columns.Get(0).CellType = checkBoxCellType3;
-            this.fpsCowPart_Sheet1.Columns.Get(0).Label = "...";
-            this.fpsCowPart_Sheet1.Columns.Get(0).Resizable = false;
-            this.fpsCowPart_Sheet1.Columns.Get(0).Width = 25F;
-            this.fpsCowPart_Sheet1.Columns.Get(1).CellType = textCellType7;
-            this.fpsCowPart_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            this.fpsCowPart_Sheet1.Columns.Get(1).Label = "สถานะ";
-            this.fpsCowPart_Sheet1.Columns.Get(1).Locked = true;
-            this.fpsCowPart_Sheet1.Columns.Get(1).Width = 120F;
-            this.fpsCowPart_Sheet1.Columns.Get(2).CellType = textCellType8;
-            this.fpsCowPart_Sheet1.Columns.Get(2).Label = "รหัสแผนก";
-            this.fpsCowPart_Sheet1.Columns.Get(2).Locked = true;
-            this.fpsCowPart_Sheet1.Columns.Get(2).Width = 200F;
-            this.fpsCowPart_Sheet1.Columns.Get(3).CellType = textCellType9;
-            this.fpsCowPart_Sheet1.Columns.Get(3).Label = "ชื่อแผนก";
-            this.fpsCowPart_Sheet1.Columns.Get(3).Locked = true;
-            this.fpsCowPart_Sheet1.Columns.Get(3).Width = 220F;
-            this.fpsCowPart_Sheet1.Columns.Get(4).Label = "หมายเหตุ";
-            this.fpsCowPart_Sheet1.Columns.Get(4).Locked = true;
-            this.fpsCowPart_Sheet1.Columns.Get(4).Width = 250F;
-            this.fpsCowPart_Sheet1.RowHeader.Columns.Default.Resizable = false;
-            this.fpsCowPart_Sheet1.RowHeader.DefaultStyle.Parent = "RowHeaderDefault";
-            this.fpsCowPart_Sheet1.SheetCornerStyle.Parent = "CornerDefault";
-            this.fpsCowPart_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
-            this.fpsCowPart.SetActiveViewport(0, 1, 0);
+            this.fpsData_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
+            this.fpsData_Sheet1.ColumnCount = 5;
+            this.fpsData_Sheet1.RowCount = 0;
+            this.fpsData_Sheet1.ColumnHeader.Cells.Get(0, 0).Value = "...";
+            this.fpsData_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "สถานะ";
+            this.fpsData_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "รหัสแผนก";
+            this.fpsData_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "ชื่อแผนก";
+            this.fpsData_Sheet1.ColumnHeader.Cells.Get(0, 4).Value = "หมายเหตุ";
+            this.fpsData_Sheet1.ColumnHeader.DefaultStyle.Parent = "HeaderDefault";
+            this.fpsData_Sheet1.Columns.Get(0).CellType = checkBoxCellType1;
+            this.fpsData_Sheet1.Columns.Get(0).Label = "...";
+            this.fpsData_Sheet1.Columns.Get(0).Resizable = false;
+            this.fpsData_Sheet1.Columns.Get(0).Width = 25F;
+            this.fpsData_Sheet1.Columns.Get(1).CellType = textCellType1;
+            this.fpsData_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.fpsData_Sheet1.Columns.Get(1).Label = "สถานะ";
+            this.fpsData_Sheet1.Columns.Get(1).Locked = true;
+            this.fpsData_Sheet1.Columns.Get(1).Width = 120F;
+            this.fpsData_Sheet1.Columns.Get(2).CellType = textCellType2;
+            this.fpsData_Sheet1.Columns.Get(2).Label = "รหัสแผนก";
+            this.fpsData_Sheet1.Columns.Get(2).Locked = true;
+            this.fpsData_Sheet1.Columns.Get(2).Width = 200F;
+            this.fpsData_Sheet1.Columns.Get(3).CellType = textCellType3;
+            this.fpsData_Sheet1.Columns.Get(3).Label = "ชื่อแผนก";
+            this.fpsData_Sheet1.Columns.Get(3).Locked = true;
+            this.fpsData_Sheet1.Columns.Get(3).Width = 220F;
+            this.fpsData_Sheet1.Columns.Get(4).Label = "หมายเหตุ";
+            this.fpsData_Sheet1.Columns.Get(4).Locked = true;
+            this.fpsData_Sheet1.Columns.Get(4).Width = 250F;
+            this.fpsData_Sheet1.RowHeader.Columns.Default.Resizable = false;
+            this.fpsData_Sheet1.RowHeader.DefaultStyle.Parent = "RowHeaderDefault";
+            this.fpsData_Sheet1.SheetCornerStyle.Parent = "CornerDefault";
+            this.fpsData_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
+            this.fpsData.SetActiveViewport(0, 1, 0);
             // 
             // frmDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 441);
-            this.Controls.Add(this.fpsCowPart);
+            this.Controls.Add(this.fpsData);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
@@ -315,8 +315,8 @@
             this.groupBox1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fpsCowPart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fpsCowPart_Sheet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fpsData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fpsData_Sheet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,7 +341,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.CheckBox chkOnlyInActive;
-        private FarPoint.Win.Spread.SheetView fpsCowPart_Sheet1;
-        private FarPoint.Win.Spread.FpSpread fpsCowPart;
+        private FarPoint.Win.Spread.SheetView fpsData_Sheet1;
+        private FarPoint.Win.Spread.FpSpread fpsData;
     }
 }

@@ -38,13 +38,11 @@
             FarPoint.Win.Spread.CellType.TextCellType textCellType3 = new FarPoint.Win.Spread.CellType.TextCellType();
             FarPoint.Win.Spread.CellType.TextCellType textCellType4 = new FarPoint.Win.Spread.CellType.TextCellType();
             FarPoint.Win.Spread.CellType.TextCellType textCellType5 = new FarPoint.Win.Spread.CellType.TextCellType();
-            FarPoint.Win.Spread.CellType.ComboBoxCellType comboBoxCellType1 = new FarPoint.Win.Spread.CellType.ComboBoxCellType();
-            FarPoint.Win.Spread.CellType.ComboBoxCellType comboBoxCellType2 = new FarPoint.Win.Spread.CellType.ComboBoxCellType();
-            FarPoint.Win.BevelBorder bevelBorder1 = new FarPoint.Win.BevelBorder(FarPoint.Win.BevelBorderType.Lowered);
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType1 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.BevelBorder bevelBorder2 = new FarPoint.Win.BevelBorder(FarPoint.Win.BevelBorderType.Lowered);
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType2 = new FarPoint.Win.Spread.CellType.NumberCellType();
             FarPoint.Win.Spread.CellType.TextCellType textCellType6 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType7 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType8 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType9 = new FarPoint.Win.Spread.CellType.TextCellType();
+            FarPoint.Win.Spread.CellType.TextCellType textCellType10 = new FarPoint.Win.Spread.CellType.TextCellType();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbSearch = new System.Windows.Forms.ToolStripButton();
             this.tsbAddNew = new System.Windows.Forms.ToolStripButton();
@@ -61,11 +59,9 @@
             this.txtMemberCode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboTumbon = new System.Windows.Forms.ComboBox();
             this.cboAmphur = new System.Windows.Forms.ComboBox();
-            this.cboProvince = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.fpsSearchResult = new FarPoint.Win.Spread.FpSpread();
             this.fpsSearchResult_Sheet1 = new FarPoint.Win.Spread.SheetView();
@@ -179,11 +175,9 @@
             this.grbSearch.Controls.Add(this.txtMemberCode);
             this.grbSearch.Controls.Add(this.label4);
             this.grbSearch.Controls.Add(this.label3);
-            this.grbSearch.Controls.Add(this.label2);
             this.grbSearch.Controls.Add(this.label1);
             this.grbSearch.Controls.Add(this.cboTumbon);
             this.grbSearch.Controls.Add(this.cboAmphur);
-            this.grbSearch.Controls.Add(this.cboProvince);
             this.grbSearch.Controls.Add(this.txtName);
             this.grbSearch.Location = new System.Drawing.Point(8, 66);
             this.grbSearch.Margin = new System.Windows.Forms.Padding(4);
@@ -197,7 +191,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 53);
+            this.label5.Location = new System.Drawing.Point(23, 80);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 16);
@@ -214,7 +208,7 @@
             "ยังไม่ได้เชือด/อยู่ในคิว",
             "เชือดแล้ว",
             "ตาย/อื่นๆ"});
-            this.comboBox1.Location = new System.Drawing.Point(111, 50);
+            this.comboBox1.Location = new System.Drawing.Point(111, 77);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(227, 24);
@@ -242,32 +236,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(397, 80);
+            this.label4.Location = new System.Drawing.Point(397, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 16);
+            this.label4.Size = new System.Drawing.Size(65, 16);
             this.label4.TabIndex = 8;
-            this.label4.Text = "ตำบล:";
+            this.label4.Text = "สถานที่เลี้ยง:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 80);
+            this.label3.Location = new System.Drawing.Point(23, 52);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 16);
+            this.label3.Size = new System.Drawing.Size(30, 16);
             this.label3.TabIndex = 7;
-            this.label3.Text = "อำเภอ:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(397, 53);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "จังหวัด:";
+            this.label3.Text = "คอก:";
             // 
             // label1
             // 
@@ -282,7 +266,7 @@
             // cboTumbon
             // 
             this.cboTumbon.FormattingEnabled = true;
-            this.cboTumbon.Location = new System.Drawing.Point(501, 77);
+            this.cboTumbon.Location = new System.Drawing.Point(501, 49);
             this.cboTumbon.Margin = new System.Windows.Forms.Padding(4);
             this.cboTumbon.Name = "cboTumbon";
             this.cboTumbon.Size = new System.Drawing.Size(227, 24);
@@ -291,20 +275,11 @@
             // cboAmphur
             // 
             this.cboAmphur.FormattingEnabled = true;
-            this.cboAmphur.Location = new System.Drawing.Point(111, 77);
+            this.cboAmphur.Location = new System.Drawing.Point(111, 49);
             this.cboAmphur.Margin = new System.Windows.Forms.Padding(4);
             this.cboAmphur.Name = "cboAmphur";
             this.cboAmphur.Size = new System.Drawing.Size(227, 24);
             this.cboAmphur.TabIndex = 4;
-            // 
-            // cboProvince
-            // 
-            this.cboProvince.FormattingEnabled = true;
-            this.cboProvince.Location = new System.Drawing.Point(501, 50);
-            this.cboProvince.Margin = new System.Windows.Forms.Padding(4);
-            this.cboProvince.Name = "cboProvince";
-            this.cboProvince.Size = new System.Drawing.Size(227, 24);
-            this.cboProvince.TabIndex = 3;
             // 
             // txtName
             // 
@@ -327,7 +302,7 @@
             this.fpsSearchResult.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.fpsSearchResult.HorizontalScrollBar.Name = "";
             this.fpsSearchResult.HorizontalScrollBar.Renderer = defaultScrollBarRenderer1;
-            this.fpsSearchResult.HorizontalScrollBar.TabIndex = 21;
+            this.fpsSearchResult.HorizontalScrollBar.TabIndex = 29;
             this.fpsSearchResult.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.fpsSearchResult.Location = new System.Drawing.Point(8, 183);
             this.fpsSearchResult.Margin = new System.Windows.Forms.Padding(4);
@@ -341,7 +316,7 @@
             this.fpsSearchResult.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.fpsSearchResult.VerticalScrollBar.Name = "";
             this.fpsSearchResult.VerticalScrollBar.Renderer = defaultScrollBarRenderer2;
-            this.fpsSearchResult.VerticalScrollBar.TabIndex = 22;
+            this.fpsSearchResult.VerticalScrollBar.TabIndex = 30;
             this.fpsSearchResult.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.fpsSearchResult_ButtonClicked);
             this.fpsSearchResult.DoubleClick += new System.EventHandler(this.fpsSearchResult_DoubleClick);
             // 
@@ -351,47 +326,33 @@
             this.fpsSearchResult_Sheet1.SheetName = "Sheet1";
             // Formulas and custom names must be loaded with R1C1 reference style
             this.fpsSearchResult_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
-            this.fpsSearchResult_Sheet1.ColumnCount = 12;
-            this.fpsSearchResult_Sheet1.ColumnHeader.RowCount = 2;
+            this.fpsSearchResult_Sheet1.ColumnCount = 13;
             this.fpsSearchResult_Sheet1.RowCount = 2;
             this.fpsSearchResult_Sheet1.Cells.Get(0, 1).Value = "10011022147-1";
             this.fpsSearchResult_Sheet1.Cells.Get(0, 3).Value = "นายมีใช้ อยู่สุขสบาย";
-            this.fpsSearchResult_Sheet1.Cells.Get(0, 4).Value = "นครปฐม/กำแพงแสน/กำแพงแสน";
-            this.fpsSearchResult_Sheet1.Cells.Get(0, 5).Value = "บราห์มัน/น้ำตาลเข้ม";
-            this.fpsSearchResult_Sheet1.Cells.Get(0, 6).Value = "15/04/2560";
+            this.fpsSearchResult_Sheet1.Cells.Get(0, 4).Value = "Stall1";
+            this.fpsSearchResult_Sheet1.Cells.Get(0, 5).Value = "Farm1";
+            this.fpsSearchResult_Sheet1.Cells.Get(0, 6).Value = "บราห์มัน/น้ำตาลเข้ม";
+            this.fpsSearchResult_Sheet1.Cells.Get(0, 7).Value = "15/04/2560";
             this.fpsSearchResult_Sheet1.Cells.Get(1, 1).Value = "10011022147-2";
             this.fpsSearchResult_Sheet1.Cells.Get(1, 3).Value = "นายมีใช้ อยู่สุขสบาย";
-            this.fpsSearchResult_Sheet1.Cells.Get(1, 4).Value = "นครปฐม/กำแพงแสน/กำแพงแสน";
-            this.fpsSearchResult_Sheet1.Cells.Get(1, 5).Value = "บราห์มัน/น้ำตาลเข้ม";
-            this.fpsSearchResult_Sheet1.Cells.Get(1, 6).Value = "15/04/2560";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 0).RowSpan = 2;
+            this.fpsSearchResult_Sheet1.Cells.Get(1, 4).Value = "Stall1";
+            this.fpsSearchResult_Sheet1.Cells.Get(1, 5).Value = "Farm1";
+            this.fpsSearchResult_Sheet1.Cells.Get(1, 6).Value = "บราห์มัน/น้ำตาลเข้ม";
+            this.fpsSearchResult_Sheet1.Cells.Get(1, 7).Value = "15/04/2560";
             this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 0).Value = "...";
             this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 1).ColumnSpan = 2;
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 1).RowSpan = 2;
             this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "รหัสโค";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 3).RowSpan = 2;
             this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "ชื่อ-สกุลเจ้าของ";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 4).RowSpan = 2;
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 4).Value = "ที่อยู่ (จังหวัด/อำเภอ/ตำบล)";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 5).RowSpan = 2;
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 5).Value = "พันธุ์/สี";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 6).RowSpan = 2;
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 6).Value = "วันที่ลงทะเบียน";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 7).RowSpan = 2;
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 7).Value = "สถานะ";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 8).RowSpan = 2;
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 8).Value = "เกรด";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 9).RowSpan = 2;
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 9).Value = "น้ำหนัก(kg.)";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 10).RowSpan = 2;
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 10).Value = "ราคา(บาทต่อ kg.)";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 11).RowSpan = 2;
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 11).Value = "ราคาสุทธิ(บาท)";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(1, 0).Value = "...";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(1, 4).Value = "จังหวัด";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(1, 7).Value = "ทั้งหมด";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(1, 8).Value = "เชือดแล้ว";
-            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(1, 9).Value = "ยังไม่เชือด";
+            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 4).Value = "คอก";
+            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 5).Value = "สถานที่เลี้ยง";
+            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 6).Value = "พันธุ์/สี";
+            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 7).Value = "วันที่ลงทะเบียน";
+            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 8).Value = "สถานะ";
+            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 9).Value = "เกรด";
+            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 10).Value = "น้ำหนัก(kg.)";
+            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 11).Value = "ราคา(บาทต่อ kg.)";
+            this.fpsSearchResult_Sheet1.ColumnHeader.Cells.Get(0, 12).Value = "ราคาสุทธิ(บาท)";
             this.fpsSearchResult_Sheet1.ColumnHeader.DefaultStyle.Parent = "HeaderDefault";
             this.fpsSearchResult_Sheet1.Columns.Get(0).CellType = checkBoxCellType1;
             this.fpsSearchResult_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
@@ -399,54 +360,57 @@
             this.fpsSearchResult_Sheet1.Columns.Get(0).Resizable = false;
             this.fpsSearchResult_Sheet1.Columns.Get(0).Width = 25F;
             this.fpsSearchResult_Sheet1.Columns.Get(1).CellType = textCellType1;
+            this.fpsSearchResult_Sheet1.Columns.Get(1).Label = "รหัสโค";
             this.fpsSearchResult_Sheet1.Columns.Get(1).Locked = true;
-            this.fpsSearchResult_Sheet1.Columns.Get(1).Width = 123F;
+            this.fpsSearchResult_Sheet1.Columns.Get(1).Width = 110F;
             buttonCellType1.ButtonColor2 = System.Drawing.SystemColors.ButtonFace;
             buttonCellType1.Picture = ((System.Drawing.Image)(resources.GetObject("buttonCellType1.Picture")));
             this.fpsSearchResult_Sheet1.Columns.Get(2).CellType = buttonCellType1;
             this.fpsSearchResult_Sheet1.Columns.Get(2).Resizable = false;
             this.fpsSearchResult_Sheet1.Columns.Get(2).Width = 31F;
             this.fpsSearchResult_Sheet1.Columns.Get(3).CellType = textCellType2;
+            this.fpsSearchResult_Sheet1.Columns.Get(3).Label = "ชื่อ-สกุลเจ้าของ";
             this.fpsSearchResult_Sheet1.Columns.Get(3).Locked = true;
             this.fpsSearchResult_Sheet1.Columns.Get(3).Width = 154F;
             this.fpsSearchResult_Sheet1.Columns.Get(4).CellType = textCellType3;
-            this.fpsSearchResult_Sheet1.Columns.Get(4).Label = "จังหวัด";
+            this.fpsSearchResult_Sheet1.Columns.Get(4).Label = "คอก";
             this.fpsSearchResult_Sheet1.Columns.Get(4).Locked = true;
-            this.fpsSearchResult_Sheet1.Columns.Get(4).Width = 233F;
-            this.fpsSearchResult_Sheet1.Columns.Get(5).CellType = textCellType4;
+            this.fpsSearchResult_Sheet1.Columns.Get(4).Width = 100F;
+            this.fpsSearchResult_Sheet1.Columns.Get(5).Label = "สถานที่เลี้ยง";
             this.fpsSearchResult_Sheet1.Columns.Get(5).Locked = true;
-            this.fpsSearchResult_Sheet1.Columns.Get(5).Width = 126F;
-            this.fpsSearchResult_Sheet1.Columns.Get(6).CellType = textCellType5;
-            this.fpsSearchResult_Sheet1.Columns.Get(6).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.fpsSearchResult_Sheet1.Columns.Get(5).Width = 100F;
+            this.fpsSearchResult_Sheet1.Columns.Get(6).CellType = textCellType4;
+            this.fpsSearchResult_Sheet1.Columns.Get(6).Label = "พันธุ์/สี";
             this.fpsSearchResult_Sheet1.Columns.Get(6).Locked = true;
-            this.fpsSearchResult_Sheet1.Columns.Get(6).Width = 97F;
-            comboBoxCellType1.ButtonAlign = FarPoint.Win.ButtonAlign.Right;
-            this.fpsSearchResult_Sheet1.Columns.Get(7).CellType = comboBoxCellType1;
-            this.fpsSearchResult_Sheet1.Columns.Get(7).Label = "ทั้งหมด";
-            this.fpsSearchResult_Sheet1.Columns.Get(7).Locked = false;
-            this.fpsSearchResult_Sheet1.Columns.Get(7).Width = 138F;
-            comboBoxCellType2.ButtonAlign = FarPoint.Win.ButtonAlign.Right;
-            this.fpsSearchResult_Sheet1.Columns.Get(8).CellType = comboBoxCellType2;
-            this.fpsSearchResult_Sheet1.Columns.Get(8).Label = "เชือดแล้ว";
-            this.fpsSearchResult_Sheet1.Columns.Get(8).Locked = false;
-            this.fpsSearchResult_Sheet1.Columns.Get(8).Width = 70F;
-            this.fpsSearchResult_Sheet1.Columns.Get(9).BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.fpsSearchResult_Sheet1.Columns.Get(9).Border = bevelBorder1;
-            numberCellType1.DecimalPlaces = 2;
-            this.fpsSearchResult_Sheet1.Columns.Get(9).CellType = numberCellType1;
-            this.fpsSearchResult_Sheet1.Columns.Get(9).Label = "ยังไม่เชือด";
-            this.fpsSearchResult_Sheet1.Columns.Get(9).Locked = false;
-            this.fpsSearchResult_Sheet1.Columns.Get(9).Width = 80F;
-            this.fpsSearchResult_Sheet1.Columns.Get(10).BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.fpsSearchResult_Sheet1.Columns.Get(10).Border = bevelBorder2;
-            numberCellType2.DecimalPlaces = 2;
-            this.fpsSearchResult_Sheet1.Columns.Get(10).CellType = numberCellType2;
-            this.fpsSearchResult_Sheet1.Columns.Get(10).Locked = false;
-            this.fpsSearchResult_Sheet1.Columns.Get(10).Width = 110F;
-            this.fpsSearchResult_Sheet1.Columns.Get(11).CellType = textCellType6;
-            this.fpsSearchResult_Sheet1.Columns.Get(11).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
+            this.fpsSearchResult_Sheet1.Columns.Get(6).Width = 126F;
+            this.fpsSearchResult_Sheet1.Columns.Get(7).CellType = textCellType5;
+            this.fpsSearchResult_Sheet1.Columns.Get(7).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.fpsSearchResult_Sheet1.Columns.Get(7).Label = "วันที่ลงทะเบียน";
+            this.fpsSearchResult_Sheet1.Columns.Get(7).Locked = true;
+            this.fpsSearchResult_Sheet1.Columns.Get(7).Width = 97F;
+            this.fpsSearchResult_Sheet1.Columns.Get(8).CellType = textCellType6;
+            this.fpsSearchResult_Sheet1.Columns.Get(8).Label = "สถานะ";
+            this.fpsSearchResult_Sheet1.Columns.Get(8).Locked = true;
+            this.fpsSearchResult_Sheet1.Columns.Get(8).Width = 98F;
+            this.fpsSearchResult_Sheet1.Columns.Get(9).CellType = textCellType7;
+            this.fpsSearchResult_Sheet1.Columns.Get(9).Label = "เกรด";
+            this.fpsSearchResult_Sheet1.Columns.Get(9).Locked = true;
+            this.fpsSearchResult_Sheet1.Columns.Get(9).Width = 70F;
+            this.fpsSearchResult_Sheet1.Columns.Get(10).CellType = textCellType8;
+            this.fpsSearchResult_Sheet1.Columns.Get(10).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.fpsSearchResult_Sheet1.Columns.Get(10).Label = "น้ำหนัก(kg.)";
+            this.fpsSearchResult_Sheet1.Columns.Get(10).Locked = true;
+            this.fpsSearchResult_Sheet1.Columns.Get(10).Width = 80F;
+            this.fpsSearchResult_Sheet1.Columns.Get(11).CellType = textCellType9;
+            this.fpsSearchResult_Sheet1.Columns.Get(11).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            this.fpsSearchResult_Sheet1.Columns.Get(11).Label = "ราคา(บาทต่อ kg.)";
             this.fpsSearchResult_Sheet1.Columns.Get(11).Locked = true;
-            this.fpsSearchResult_Sheet1.Columns.Get(11).Width = 104F;
+            this.fpsSearchResult_Sheet1.Columns.Get(11).Width = 100F;
+            this.fpsSearchResult_Sheet1.Columns.Get(12).CellType = textCellType10;
+            this.fpsSearchResult_Sheet1.Columns.Get(12).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
+            this.fpsSearchResult_Sheet1.Columns.Get(12).Label = "ราคาสุทธิ(บาท)";
+            this.fpsSearchResult_Sheet1.Columns.Get(12).Locked = true;
+            this.fpsSearchResult_Sheet1.Columns.Get(12).Width = 100F;
             this.fpsSearchResult_Sheet1.RowHeader.Columns.Default.Resizable = true;
             this.fpsSearchResult_Sheet1.RowHeader.DefaultStyle.Parent = "RowHeaderDefault";
             this.fpsSearchResult_Sheet1.SheetCornerStyle.Parent = "CornerDefault";
@@ -508,11 +472,9 @@
         private System.Windows.Forms.GroupBox grbSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboTumbon;
         private System.Windows.Forms.ComboBox cboAmphur;
-        private System.Windows.Forms.ComboBox cboProvince;
         private System.Windows.Forms.TextBox txtName;
         private FarPoint.Win.Spread.FpSpread fpsSearchResult;
         private FarPoint.Win.Spread.SheetView fpsSearchResult_Sheet1;

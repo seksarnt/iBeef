@@ -1,6 +1,6 @@
 ﻿namespace BSSoft.iBeef.tsmSettings
 {
-    partial class frmEditCowPart
+    partial class frmEditCowHorn
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditCowPart));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditCowHorn));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
+            this.tsbWorkType = new System.Windows.Forms.ToolStripLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txtCowPartCode = new System.Windows.Forms.TextBox();
-            this.txtCowPartName = new System.Windows.Forms.TextBox();
+            this.txCode = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.chkInActive = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tsbWorkType = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,23 +88,32 @@
             this.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
-            // txtCowPartCode
+            // tsbWorkType
             // 
-            this.txtCowPartCode.Location = new System.Drawing.Point(140, 69);
-            this.txtCowPartCode.MaxLength = 50;
-            this.txtCowPartCode.Name = "txtCowPartCode";
-            this.txtCowPartCode.Size = new System.Drawing.Size(175, 22);
-            this.txtCowPartCode.TabIndex = 28;
-            this.txtCowPartCode.TextChanged += new System.EventHandler(this.txtAll_TextChanged);
+            this.tsbWorkType.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsbWorkType.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbWorkType.ForeColor = System.Drawing.Color.Silver;
+            this.tsbWorkType.Name = "tsbWorkType";
+            this.tsbWorkType.Size = new System.Drawing.Size(77, 45);
+            this.tsbWorkType.Text = "เพิ่มใหม่";
             // 
-            // txtCowPartName
+            // txCode
             // 
-            this.txtCowPartName.Location = new System.Drawing.Point(140, 97);
-            this.txtCowPartName.MaxLength = 50;
-            this.txtCowPartName.Name = "txtCowPartName";
-            this.txtCowPartName.Size = new System.Drawing.Size(175, 22);
-            this.txtCowPartName.TabIndex = 29;
-            this.txtCowPartName.TextChanged += new System.EventHandler(this.txtAll_TextChanged);
+            this.txCode.Location = new System.Drawing.Point(140, 69);
+            this.txCode.MaxLength = 50;
+            this.txCode.Name = "txCode";
+            this.txCode.Size = new System.Drawing.Size(175, 22);
+            this.txCode.TabIndex = 28;
+            this.txCode.TextChanged += new System.EventHandler(this.txtAll_TextChanged);
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(140, 97);
+            this.txtName.MaxLength = 50;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(175, 22);
+            this.txtName.TabIndex = 29;
+            this.txtName.TextChanged += new System.EventHandler(this.txtAll_TextChanged);
             // 
             // txtRemark
             // 
@@ -133,9 +142,9 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(26, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 32;
-            this.label1.Text = "รหัสชิ้นส่วนโค:";
+            this.label1.Text = "รหัสลักษณะ:";
             // 
             // label2
             // 
@@ -143,9 +152,9 @@
             this.label2.ForeColor = System.Drawing.Color.Blue;
             this.label2.Location = new System.Drawing.Point(26, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.Size = new System.Drawing.Size(58, 16);
             this.label2.TabIndex = 33;
-            this.label2.Text = "ชื่อชิ้นส่วนโค:";
+            this.label2.Text = "ชื่อลักษณะ:";
             // 
             // label3
             // 
@@ -156,16 +165,7 @@
             this.label3.TabIndex = 34;
             this.label3.Text = "หมายเหตุ:";
             // 
-            // tsbWorkType
-            // 
-            this.tsbWorkType.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbWorkType.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbWorkType.ForeColor = System.Drawing.Color.Silver;
-            this.tsbWorkType.Name = "tsbWorkType";
-            this.tsbWorkType.Size = new System.Drawing.Size(77, 45);
-            this.tsbWorkType.Text = "เพิ่มใหม่";
-            // 
-            // frmEditCowPart
+            // frmEditCowHorn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -175,8 +175,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkInActive);
             this.Controls.Add(this.txtRemark);
-            this.Controls.Add(this.txtCowPartName);
-            this.Controls.Add(this.txtCowPartCode);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txCode);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -185,9 +185,9 @@
             this.MaximumSize = new System.Drawing.Size(487, 301);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(487, 301);
-            this.Name = "frmEditCowPart";
+            this.Name = "frmEditCowHorn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "เพิ่มชิ้นส่วนโค(สินค้า)";
+            this.Text = "เพิ่มลักษณะเขา";
             this.Load += new System.EventHandler(this.frmEditCowType_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -203,8 +203,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton tsbClose;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.TextBox txtCowPartCode;
-        private System.Windows.Forms.TextBox txtCowPartName;
+        private System.Windows.Forms.TextBox txCode;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.CheckBox chkInActive;
         private System.Windows.Forms.Label label1;

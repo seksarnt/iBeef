@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iBeefSquare.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -65,6 +68,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Static\Enumeric.cs" />
     <Compile Include="Static\ManageChildPages.cs" />
+    <Compile Include="tsmCowList\frmEditCow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmCowList\frmEditCow.Designer.cs">
+      <DependentUpon>frmEditCow.cs</DependentUpon>
+    </Compile>
     <Compile Include="tsmFile\frmDBSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,17 +86,59 @@
     <Compile Include="tsmCowList\frmCowList.Designer.cs">
       <DependentUpon>frmCowList.cs</DependentUpon>
     </Compile>
+    <Compile Include="tsmSettings\frmCowBreed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowBreed.Designer.cs">
+      <DependentUpon>frmCowBreed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowColor.Designer.cs">
+      <DependentUpon>frmCowColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowGrowLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowGrowLevel.Designer.cs">
+      <DependentUpon>frmCowGrowLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowHorn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowHorn.Designer.cs">
+      <DependentUpon>frmCowHorn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowLocation.Designer.cs">
+      <DependentUpon>frmCowLocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="tsmSettings\frmCowPart.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="tsmSettings\frmCowPart.Designer.cs">
       <DependentUpon>frmCowPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="tsmSettings\frmCowType.cs">
+    <Compile Include="tsmSettings\frmCowPurpose.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tsmSettings\frmCowType.Designer.cs">
-      <DependentUpon>frmCowType.cs</DependentUpon>
+    <Compile Include="tsmSettings\frmCowPurpose.Designer.cs">
+      <DependentUpon>frmCowPurpose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowStall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowStall.Designer.cs">
+      <DependentUpon>frmCowStall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmCowStatus.Designer.cs">
+      <DependentUpon>frmCowStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="tsmSettings\frmDepartment.cs">
       <SubType>Form</SubType>
@@ -95,11 +146,41 @@
     <Compile Include="tsmSettings\frmDepartment.Designer.cs">
       <DependentUpon>frmDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="tsmSettings\frmEditCowBreed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowBreed.Designer.cs">
+      <DependentUpon>frmEditCowBreed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowGrowLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowGrowLevel.Designer.cs">
+      <DependentUpon>frmEditCowGrowLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowHorn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowHorn.Designer.cs">
+      <DependentUpon>frmEditCowHorn.cs</DependentUpon>
+    </Compile>
     <Compile Include="tsmSettings\frmEditCowPart.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="tsmSettings\frmEditCowPart.Designer.cs">
       <DependentUpon>frmEditCowPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowPurpose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowPurpose.Designer.cs">
+      <DependentUpon>frmEditCowPurpose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsmSettings\frmEditCowStatus.Designer.cs">
+      <DependentUpon>frmEditCowStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="tsmSettings\frmEditCowType.cs">
       <SubType>Form</SubType>
@@ -155,6 +236,15 @@
     <Compile Include="tsmStaff\frmStaffTimeStamp.Designer.cs">
       <DependentUpon>frmStaffTimeStamp.cs</DependentUpon>
     </Compile>
+    <Compile Include="iControl\iNumericBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="iControl\iNumericBox.Designer.cs">
+      <DependentUpon>iNumericBox.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="iControl\iNumericBox.resx">
+      <DependentUpon>iNumericBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mdiMain.resx">
       <DependentUpon>mdiMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,23 +259,62 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="tsmCowList\frmEditCow.resx">
+      <DependentUpon>frmEditCow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="tsmFile\frmDBSettings.resx">
       <DependentUpon>frmDBSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tsmCowList\frmCowList.resx">
       <DependentUpon>frmCowList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmCowBreed.resx">
+      <DependentUpon>frmCowBreed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmCowColor.resx">
+      <DependentUpon>frmCowColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmCowGrowLevel.resx">
+      <DependentUpon>frmCowGrowLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmCowHorn.resx">
+      <DependentUpon>frmCowHorn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmCowLocation.resx">
+      <DependentUpon>frmCowLocation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="tsmSettings\frmCowPart.resx">
       <DependentUpon>frmCowPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tsmSettings\frmCowType.resx">
-      <DependentUpon>frmCowType.cs</DependentUpon>
+    <EmbeddedResource Include="tsmSettings\frmCowPurpose.resx">
+      <DependentUpon>frmCowPurpose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmCowStall.resx">
+      <DependentUpon>frmCowStall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmCowStatus.resx">
+      <DependentUpon>frmCowStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tsmSettings\frmDepartment.resx">
       <DependentUpon>frmDepartment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmEditCowBreed.resx">
+      <DependentUpon>frmEditCowBreed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmEditCowGrowLevel.resx">
+      <DependentUpon>frmEditCowGrowLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmEditCowHorn.resx">
+      <DependentUpon>frmEditCowHorn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="tsmSettings\frmEditCowPart.resx">
       <DependentUpon>frmEditCowPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmEditCowPurpose.resx">
+      <DependentUpon>frmEditCowPurpose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsmSettings\frmEditCowStatus.resx">
+      <DependentUpon>frmEditCowStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tsmSettings\frmEditCowType.resx">
       <DependentUpon>frmEditCowType.cs</DependentUpon>
@@ -250,6 +379,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\savedisk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iBeef.ico" />
+    <Content Include="iBeefSquare.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

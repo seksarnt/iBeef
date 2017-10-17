@@ -27,15 +27,16 @@ namespace BSSoft.iBeef.tsmCowList
         const int _col_code = 1;
         const int _col_moreinfo = 2;
         const int _col_name = 3;
-        const int _col_address = 4;
-        const int _col_breed_color = 5;
-        const int _col_registdate = 6;
-        const int _col_state = 7;
-        const int _col_grade = 8;
-        const int _col_cowcount = 9;
-        const int _col_cowproducted = 10;
-        const int _col_cowwait = 11;
-        const int _col_remark = 12;
+        const int _col_stall = 4;
+        const int _col_location = 5;
+        const int _col_breed_color = 6;
+        const int _col_registdate = 7;
+        const int _col_state = 8;
+        const int _col_grade = 9;
+        const int _col_cowcount = 10;
+        const int _col_cowproducted = 11;
+        const int _col_cowwait = 12;
+        const int _col_remark = 13;
 
 
         FarPoint.Win.Spread.CellType.ComboBoxCellType _cboCowState = new FarPoint.Win.Spread.CellType.ComboBoxCellType();

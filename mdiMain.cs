@@ -62,10 +62,6 @@ namespace BSSoft.iBeef
             {
                 targetFormType = typeof(frmMember);
             }
-            else if (pPageNo == PageNo.CowType)
-            {
-                targetFormType = typeof(frmCowType);
-            }
             else if (pPageNo == PageNo.CowPart)
             {
                 targetFormType = typeof(frmCowPart);
@@ -87,14 +83,50 @@ namespace BSSoft.iBeef
                 targetFormType = typeof(frmFaction);
             }
 
+            // tsmMainData
+            else if (pPageNo == PageNo.CowBreed)
+            {
+                targetFormType = typeof(frmCowBreed);
+            }
+            else if (pPageNo == PageNo.CowHorn)
+            {
+                targetFormType = typeof(frmCowHorn);
+            }
+            else if (pPageNo == PageNo.CowPurpose)
+            {
+                targetFormType = typeof(frmCowPurpose);
+            }
+            else if (pPageNo == PageNo.CowStatus)
+            {
+                targetFormType = typeof(frmCowStatus);
+            }
+            else if (pPageNo == PageNo.CowGrowUpLevel)
+            {
+                targetFormType = typeof(frmCowGrowLevel);
+            }
+            else if (pPageNo == PageNo.CowColor)
+            {
+                targetFormType = typeof(frmCowColor);
+            }
+            else if (pPageNo == PageNo.CowStall)
+            {
+                targetFormType = typeof(frmCowStall);
+            }
+            else if (pPageNo == PageNo.CowLocation)
+            {
+                targetFormType = typeof(frmCowLocation);
+            }
 
             bool isExist = false;
             foreach (Form f in this.MdiChildren)
             {
                 if (f.GetType() == targetFormType)
                 {
-                    f.WindowState = FormWindowState.Maximized;
                     f.Activate();
+                    if (f.WindowState != FormWindowState.Maximized)
+                    {
+                        f.WindowState = FormWindowState.Maximized;
+                    }
                     isExist = true;
                     break;
                 }
@@ -112,10 +144,6 @@ namespace BSSoft.iBeef
                 else if (pPageNo == PageNo.ManageMember)
                 {
                     targetForm = new frmMember();
-                }
-                else if (pPageNo == PageNo.CowType)
-                {
-                    targetForm = new frmCowType();
                 }
                 else if (pPageNo == PageNo.CowPart)
                 {
@@ -138,9 +166,43 @@ namespace BSSoft.iBeef
                     targetForm = new frmFaction();
                 }
 
+                    // tsmMainData
+                else if (pPageNo == PageNo.CowBreed)
+                {
+                    targetForm = new frmCowBreed();
+                }
+                else if (pPageNo == PageNo.CowHorn)
+                {
+                    targetForm = new frmCowHorn();
+                }
+                else if (pPageNo == PageNo.CowPurpose)
+                {
+                    targetForm = new frmCowPurpose();
+                }
+                else if (pPageNo == PageNo.CowStatus)
+                {
+                    targetForm = new frmCowStatus();
+                }
+                else if (pPageNo == PageNo.CowGrowUpLevel)
+                {
+                    targetForm = new frmCowGrowLevel();
+                }
+                else if (pPageNo == PageNo.CowColor)
+                {
+                    targetForm = new frmCowColor();
+                }
+                else if (pPageNo == PageNo.CowStall)
+                {
+                    targetForm = new frmCowStall();
+                }
+                else if (pPageNo == PageNo.CowLocation)
+                {
+                    targetForm = new frmCowLocation();
+                }
+
                 targetForm.MdiParent = this;
-                targetForm.WindowState = FormWindowState.Maximized;
                 targetForm.Show();
+                targetForm.WindowState = FormWindowState.Maximized;
 
                 MainFunction.AddOrRemaveChildName(pMdiParent: this,
                     pChildName: targetForm.Name,
@@ -182,6 +244,56 @@ namespace BSSoft.iBeef
         }
         #endregion
 
+
+        #region TsmMainDataEvent
+
+        private void mnuSettingCowPart_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.CowPart);
+        }
+
+        private void mnuCowBreed_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.CowBreed);
+        }
+
+        private void mnuCowHorn_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.CowHorn);
+        }
+
+        private void mnuCowPurpose_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.CowPurpose);
+        }
+
+        private void mnuCowStatus_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.CowStatus);
+        }
+
+        private void mnuCowGrowUp_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.CowGrowUpLevel);
+        }
+
+        private void mnuCowColor_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.CowColor);
+        }
+
+        private void mnuCowStall_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.CowStall);
+        }
+
+        private void mnuCowLocation_Click(object sender, EventArgs e)
+        {
+            openChildren(pPageNo: PageNo.CowLocation);
+        }
+
+        #endregion
+
         private void mnuStaff_Click(object sender, EventArgs e)
         {
             openChildren(pPageNo: PageNo.ManageStaff);
@@ -190,16 +302,6 @@ namespace BSSoft.iBeef
         private void mnuMember_Click(object sender, EventArgs e)
         {
             openChildren(pPageNo: PageNo.ManageMember);
-        }
-
-        private void mnuSettingCowType_Click(object sender, EventArgs e)
-        {
-            openChildren(pPageNo: PageNo.CowType);
-        }
-
-        private void mnuSettingCowPart_Click(object sender, EventArgs e)
-        {
-            openChildren(pPageNo: PageNo.CowPart);
         }
 
         private void mnuOntime_Click(object sender, EventArgs e)
@@ -233,5 +335,11 @@ namespace BSSoft.iBeef
                 }
             }
         }
+
+
+
+
+
+
     }
 }
